@@ -5,6 +5,9 @@ const path = require('path');
 
 const port = 8000;
 
+const db = require('./config/mongoose');
+
+//firing up the express
 const app = express();
 
 //setting up the ejs as the view engine for express server
