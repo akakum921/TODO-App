@@ -5,7 +5,11 @@ const path = require('path');
 
 const port = 8000;
 
+// get the access to the database
 const db = require('./config/mongoose');
+
+//get the Todo schema & used to populate the database / or to create the enteries 
+const Todo = require('./models/todo_list')
 
 //firing up the express
 const app = express();
@@ -38,6 +42,59 @@ app.get('/', function (req, res) {
         );
     });
 });
+
+// Create Task
+app.post('/create-todo', function (req, res) {
+    Todo.create({
+            description: req.body.description,
+            category: req.body.category,
+            date: req.body.date
+        }, function (err, newtodo) {
+            if (err) {
+                console.log('error in creating task', err);
+                return;
+            }
+            return res.redirect('back');
+        }
+    )
+});
+
+// Delete for single task
+app.get('/delete_todo_single', function(req, res) {
+    let id = req.query.id;
+    Todo.findByIdAndDelete(id, function(err){
+        if(err) {
+            console.log("error");
+            return;
+        }
+        return res.redirect('back');
+    });
+});
+
+// Delete for multiple task
+app.post('/delete-todo', function(req, res) {
+    let ids = req.body.task;
+    // if single task is to be deleted
+    if (typeof(ids) == "string") {
+        Todo.findByIdAndDelete(ids, function(err) {
+            if (err) { 
+                console.log("error in deleting"); 
+                return; 
+            }
+        });
+    } else {    // if multiple task is to be deleted
+        for (let i = 0; i < ids.length; i++) {
+            Todo.findByIdAndDelete(ids[i], function (err) {
+                if (err) { 
+                    console.log("error in deleting");
+                    return; 
+                }
+            });
+        }
+    }
+    return res.redirect('back');
+});
+
 
 
 //server listening on port 8000 
