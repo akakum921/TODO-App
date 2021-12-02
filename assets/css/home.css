@@ -3,17 +3,18 @@ body {
     margin: 0;
     padding: 0%;
 }
-
+/* Outer div containing main-header div and 'main' div */
 #container{
-    background-image:  linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),url("https://images.pexels.com/photos/376368/pexels-photo-376368.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-image:  linear-gradient(to bottom, rgba(161, 168, 207, 0.52), rgba(117, 19, 93, 0.73)),url("https://images.pexels.com/photos/376368/pexels-photo-376368.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     background-size: 100% 50%;
     background-color: #fff;
     background-repeat: no-repeat;
     width: 100%;
-    padding: 30px;
+    padding-top: 30px;
+    position: relative;
 }
 
-
+/* Common Class for all section headings */
 .section-heading{
     padding-top: 5px;
     font-size: 1rem;
@@ -21,7 +22,7 @@ body {
     padding-left: 1px;
 }
 
-
+/* Inner main div containing form */
 #main {
     max-width: 600px;
     margin: auto;
@@ -60,6 +61,7 @@ body {
     color: whitesmoke;
 }
 
+/* App tag line */
 #main-header #tag-line{
     font-family: "Josefin Sans",sans-serif;
     color: whitesmoke;
@@ -68,9 +70,6 @@ body {
     margin-top: 5px;
     padding-right: 9px;
 }
-
-
-
 
 /*Decription div*/
 #description-container {
@@ -148,8 +147,6 @@ body {
     background-color: #ececec;
 }
 
-
-/* form */
 #choose{
     font-weight: bold;
     opacity:0.4;
@@ -263,28 +260,6 @@ select {
     border:2px;
 }
 
-/* Task Description */
-#task-description {
-    color: #5c5b5b;
-    font-size: 1rem;
-}
-
-/* Task Due Date*/
-#task-date {
-    color: rgb(179, 201, 212);
-    font-size: 0.7rem;
-}
-
-/* Checkbox */
-
-input#check-box {
-    width: 15px;
-    height: 15px;
-    margin: 3px 10px 0 0;
-    cursor: pointer;
-}
-
-
 /* Delete symbol*/
 #remove-task{
     font-size: 1.2rem;
@@ -298,6 +273,29 @@ input#check-box {
 #remove-task a:hover {
     color: #dc3545;
 }
+
+/* Checkbox */
+input#check-box {
+    width: 15px;
+    height: 15px;
+    margin: 3px 10px 0 0;
+    cursor: pointer;
+}
+
+
+/* Task Description */
+#task-description {
+    color: #5c5b5b;
+    font-size: 1rem;
+}
+
+/* Task Due Date*/
+#task-date {
+    color: rgb(179, 201, 212);
+    font-size: 0.7rem;
+}
+
+
 
 /* Media queries */
 @media only screen and (max-width: 600px){
@@ -342,4 +340,44 @@ input#check-box {
         width: auto;
     }
     
+}
+
+/* Footer section */
+
+#main-footer{
+    width: 100%;
+    left: 0;
+    bottom: 5px;
+    position: relative;
+}
+
+
+#main-footer span{
+  color: gray;
+  margin-top: 25px;
+  font-size: 12px;
+  display: block;
+  text-align: center;
+}
+
+
+/* Heart Icon */
+#main-footer .fa{
+    color: #E90606;
+    margin: 0 3px;
+    font-size: 10px;
+    animation: pound .35s infinite alternate;
+    -webkit-animation: pound .35s infinite alternate;
+}
+
+@-webkit-keyframes pound{
+  to{
+    transform: scale(1.1);
+  }
+
+}
+@keyframes pound{
+  to{
+    transform: scale(1.1);
+  }
 }
