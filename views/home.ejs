@@ -49,8 +49,9 @@
                         <select name="category">
                             <option style="display:none">Choose a category</option>
                             <option value="personal">Personal</option>
-                            <option value="work">Health & Lifestyle</option>
-                            <option value="work">Kitchen & Grocerry</option>
+                            <option value="health">Health</option>
+                            <option value="kitchen">Kitchen</option>
+                            <option value="lifestyle">Lifestyle</option>
                             <option value="school">School</option>
                             <option value="cleaning">Cleaning</option>
                             <option value="work">Work</option>
@@ -62,7 +63,7 @@
                     <!-- Due Date container -->
                     <div id="due-date-container">
                         <p class="section-heading">DUE DATE</p>
-                        <input id="date-box" type="date" name="date" placeholder="" required>
+                        <input id="date-box" type="datetime-local" name="date" placeholder="" required>
                     </div>
     
                 </div>
@@ -139,8 +140,12 @@
             </div>
     
         </div>
+
+        <footer>
+
+        </footer>
     </div>
     
-    <script type="text/javascript" src="/assets/js/home.js"></script>
+    
 </body>
 </html>
