@@ -1,99 +1,160 @@
 body {
-    background-color: #c46868;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin: 10px;
-    padding: 25px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0%;
 }
 
-p{
-    color: #6e3c3c;
+#container{
+    background-image:  linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),url("https://images.pexels.com/photos/376368/pexels-photo-376368.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: 100% 50vh;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 30px;
+}
+
+
+.section-heading{
+    padding-top: 5px;
+    font-size: 1rem;
+    margin: 0;
+    padding-left: 1px;
 }
 
 
 #main {
-    
-    height: auto;
+    max-width: 540px;
     margin: auto;
-    width:55%;
-    margin-top: 40px;
-    border-radius: 10px;
-    background: white;
-     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    background: #fff;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/* Heading */
+
+#main-header {
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    justify-content: space-between;
+}
+
+#main-header img {
+    width: 100vw;
+    height: 50vh;
+}
+
+#main-header #title{
+    letter-spacing: 15px;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: "Josefin Sans",sans-serif;
+    margin-top: 70px;
+    margin-bottom: 0;
+    color: whitesmoke;
+}
+
+#main-header #tag-line{
+    font-family: "Josefin Sans",sans-serif;
+    color: whitesmoke;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    padding-left: 8px;
 }
 
 
-/* Heading*/
-#heading {
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 2.8rem;
-    color: brown;
-    margin: 0;
-    margin: 10px;
-}
 
 
-
-/*Decription*/
-#container {
+/*Decription div*/
+#description-container {
     width: auto;
     padding: 10px;
-    padding-bottom: 28px;
-    border: 1px solid #968e8e;
+    font-family: Cambria, 'Times New Roman', serif;
+    border-bottom: 1px solid lightgrey;
 }
 
-
-#container p {
+#description-container input{
+    display: block;
+    border: 0;
+    font-size: 0.9rem;
+}
+/* to remove the border of input on being focus */
+#description-container input:focus{
+    outline: none;
+}
+#description-container p {
+    font-size: 1rem;
     padding-left: 2px;
-    padding-bottom: 5px;
+    margin: 2px 0;
 }
-#container p {
-     font-size: 1rem;
-    display: inline;
-    font-family: Cambria, 'Times New Roman', serif;
-}
-#due-date-container p
-{
-    font-size: 1rem;
-    display: inline;
-    font-family: Cambria, 'Times New Roman', serif;
-
-}
-#category-container p
-{
-    font-size: 1rem;
-    display: inline;
-    font-family: Cambria, 'Times New Roman', serif;
-}
-
-/* form */
 
 #form-description {
-    font-size: 1.1rem;
-    width: 77%;
-    opacity: 0.5;
-    border:0;
+    width: 90%;
     background-color: transparent;
+    opacity: 0.5;
+}
+
+#description-container:hover
+{
+    background-color: #ececec;
+}
+/* ------------------------------------------------ */
+#category-duedate-container{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
     font-family: Cambria, 'Times New Roman', serif;
+    height: 70px;
+}
+
+#category-container {
+    width: 50%;
+    padding: 9px;
+    border-right: 1px solid lightgrey;
+}
+
+#category-container select:focus{
+    outline: none;
+}
+#due-date-container {
+    width: 50%;
+    padding: 9px;
+    padding-left: 10px;
+}
+#due-date-container .section-heading{
+    padding-left: 1px;
+}
+
+#category-container select{
+    cursor: pointer;
+}
+
+#date-box:focus{
+    outline: none;
+}
+
+#category-container:hover{
+    background-color: #ececec;
+}
+
+#due-date-container:hover{
+    background-color: #ececec;
 }
 
 
-
+/* form */
 #choose{
     font-weight: bold;
     opacity:0.4;
 }
 
-
-.date{
-    display: flex;
-}
-#category-heading {
-    padding-bottom: 5px;
-}
-
-
-/* Dropdown*/
+/* Dropdown list for category*/
 select {
     width: 100%;
     border: 0;
@@ -101,79 +162,75 @@ select {
     font-size: 1rem;
     background-color: transparent;
     opacity: 0.6;
-   
+}
+
+section option{
+    background: #9b76f0;;
 }
 
 #date-box {
-    width: 74%;
     border: 0;
+    font-family: Cambria, 'Times New Roman', serif;
     background-color: transparent;
     opacity: 0.4;
-    font-family: Cambria, 'Times New Roman', serif;
     font-size: 1rem;
-    
-    
-}
-#due-date-container {
-    width: 51%;
-    padding: 10px;
-    padding-left: 10px;
-}
+    width: 90%;
 
-#category-container {
-    
-    width: 51%;
-    padding: 10px;
-    border-right: 1px solid #7e7b7b;
 }
 
 
 
 /* Button*/
 
-.buttons-container {
+#buttons-container {
     display: flex;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
     justify-content: center;
     padding: 25px;
-    border-top: 1px solid rgba(0, 0, 0, 0.247);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.247);
 }
 
 /* Add Button */
 .add {
-    background-color: rgb(114, 112, 112);
-    color: white;
-    height: 100%;
-    width: 100%;
+
+    color: #28a745;
+    border: 1px solid #28a745;
+    background-color: transparent;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.5;
+    cursor: pointer;
     font-family: sans-serif;
-    font-size: 1.1em;
-    padding: 12px;
-    border-radius: 6px;
-    margin-right: 20px;
+    font-size: 1.1rem;
+    padding: 11px 20px;
+    border-radius: 0.25rem;
 }
 
 /* Delete Button */
 .delete-button {
-    background-color: #ed3824;
-    color: white;
-     height: 100%;
-    width: 100%;
-    border-radius: 6px;
+    color: #dc3545;
+    background-color: transparent;
+    border: 1px solid #dc3545;
+    border-radius: 0.25rem;
+    line-height: 1.5;
+    cursor: pointer;
     font-family: sans-serif;
-    font-size: 1.1em;
+    font-size: 1.1rem;
+    padding: 11px 8px;
     margin-right: 3px;
 }
 
 /* Button's Hover */
 
 .add:hover {
-    background: #3f3c3c;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #28a745;
+    color: #fff;
+    
 }
 
 .delete-button:hover {
-    background: #890f00;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #dc3545;
+    color: #fff;
 }
 
 /* TODO List*/
@@ -197,16 +254,12 @@ select {
 {
     background-color: #e1e1e1;
 }
-#description-container:hover
-{
-    background-color: #e1e1e1;
-}
+
 /* Div containing all tasks in the database  */ 
 .show {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    
 }
 
 /*Flex box*/
@@ -239,7 +292,7 @@ select {
 
 /* Task Description */
 #task-description {
-    color: #5c5b5b;
+    /* color: #5c5b5b; */
     font-size: 1rem;
 }
 
