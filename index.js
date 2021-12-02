@@ -51,7 +51,7 @@ app.post('/create-todo', function (req, res) {
             date: req.body.date
         }, function (err, newtodo) {
             if (err) {
-                console.log('error in creating task', err);
+                console.log('Error in creating the task: ', err);
                 return;
             }
             return res.redirect('back');
