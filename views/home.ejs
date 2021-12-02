@@ -101,7 +101,8 @@
                             <input type="checkbox" id="check-box" name=task value="<%= todo_list[i]._id %>">
 
                             <div class="task-container">
-                                <span id="task-description">
+                                
+                                <span id="task-description" class="strikethrough">
                                     <%= todo_list[i].description %>
                                 </span>
                                 <br>
@@ -132,6 +133,7 @@
         </div>
 
     </div>
+
 
     <!-- footer section -->
     <footer id="main-footer"> 

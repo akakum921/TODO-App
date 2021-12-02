@@ -6,12 +6,11 @@ body {
 /* Outer div containing main-header div and 'main' div */
 #container{
     background-image:  linear-gradient(to bottom, rgba(161, 168, 207, 0.52), rgba(117, 19, 93, 0.73)),url("https://images.pexels.com/photos/376368/pexels-photo-376368.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-    background-size: 100% 50%;
+    background-size: 100% 50vh;
     background-color: #fff;
     background-repeat: no-repeat;
     width: 100%;
     padding-top: 30px;
-    position: relative;
 }
 
 /* Common Class for all section headings */
@@ -25,7 +24,7 @@ body {
 /* Inner main div containing form */
 #main {
     max-width: 600px;
-    margin: auto;
+    margin: 0 auto 11rem auto;
     display: flex;
     flex-direction: column;
     z-index: 1;
@@ -35,7 +34,7 @@ body {
 /* Heading */
 
 #main-header {
-    position: sticky;
+    /* position: sticky; */
     text-align: center;
     max-width: 600px;
     display: flex;
@@ -43,7 +42,6 @@ body {
     margin: auto;
     margin-bottom: 30px;
     padding-top: 30px;
-    justify-content: space-between;
 }
 
 #main-header img {
@@ -231,6 +229,7 @@ select {
 #task {
     display: flex;
     width: 94%;
+    box-sizing: content-box;
     flex-direction: row; 
     margin: auto;
     border-top: 1px solid lightgrey;
@@ -238,7 +237,10 @@ select {
     justify-content: space-evenly;
 }
 
-
+.task-container{
+    width: 69%;
+    box-sizing: border-box;
+}
 /*hover effects  */
 #task:hover{
     background-color: #f8f1f1;
@@ -250,12 +252,12 @@ select {
     text-align: center;
     background: linear-gradient(90deg, rgba(62,38,178,1) 0%, rgba(183,69,219,1) 86%);
     color:white;
-    height: 18px;
-    width: 70px;
-    padding: 15px 10px 10px 10px;
+    padding-top: 12px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 5.5rem;
     font-size: 0.8rem;
     text-transform: uppercase;
-    border:2px;
 }
 
 /* Delete symbol*/
@@ -300,6 +302,10 @@ input#check-box {
     #task-category{
         padding: 10px;
         margin: 10px 0 0 0;
+    }
+    .task-container{
+        text-align: center;
+        width: 100%;
     }
     #task-description{
         display: block;
