@@ -43,7 +43,7 @@ app.get('/', function (req, res) {
     });
 });
 
-// Create Task
+// Create Todo Task
 app.post('/create-todo', function (req, res) {
     Todo.create({
             description: req.body.description,
@@ -54,7 +54,7 @@ app.post('/create-todo', function (req, res) {
                 console.log('Error in creating the task: ', err);
                 return;
             }
-            return res.redirect('back');
+            return res.redirect('/');
         }
     )
 });
@@ -64,10 +64,10 @@ app.get('/delete_todo_single', function(req, res) {
     let id = req.query.id;
     Todo.findByIdAndDelete(id, function(err){
         if(err) {
-            console.log("error");
+            console.log("Error in delete");
             return;
         }
-        return res.redirect('back');
+        return res.redirect('/');
     });
 });
 
@@ -92,7 +92,7 @@ app.post('/delete-todo', function(req, res) {
             });
         }
     }
-    return res.redirect('back');
+    return res.redirect('/');
 });
 
 

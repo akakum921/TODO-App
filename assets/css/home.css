@@ -88,6 +88,7 @@ body {
 #description-container input:focus{
     outline: none;
 }
+
 #description-container p {
     font-size: 1rem;
     padding-left: 2px;
@@ -96,13 +97,11 @@ body {
 
 #form-description {
     width: 95%;
-    background-color: transparent;
     opacity: 0.5;
 }
 
-#description-container:hover
-{
-    background-color: #ececec;
+#description-container:hover{
+    background-color: #f8f1f1;
 }
 /* ------------------------------------------------ */
 #category-duedate-container{
@@ -140,11 +139,11 @@ body {
 }
 
 #category-container:hover{
-    background-color: #ececec;
+    background-color: #f8f1f1;
 }
 
 #due-date-container:hover{
-    background-color: #ececec;
+    background-color: #f8f1f1;
 }
 
 #choose{
@@ -242,9 +241,8 @@ select {
 
 /*hover effects  */
 #task:hover{
-    background-color: #e1e1e1;
+    background-color: #f8f1f1;
 }
-
 
 
 /* Category Box */
@@ -370,6 +368,7 @@ input#check-box {
     -webkit-animation: pound .35s infinite alternate;
 }
 
+/* Animation for heart */
 @-webkit-keyframes pound{
   to{
     transform: scale(1.1);
