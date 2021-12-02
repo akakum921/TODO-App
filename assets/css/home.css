@@ -44,6 +44,7 @@ body {
     padding-top: 30px;
 }
 
+/* Header image */
 #main-header img {
     width: 100vw;
     height: 50vh;
@@ -102,6 +103,7 @@ body {
     background-color: #f8f1f1;
 }
 /* ------------------------------------------------ */
+
 #category-duedate-container{
     display: flex;
     flex-direction: row;
@@ -115,7 +117,7 @@ body {
     padding: 9px;
     border-right: 1px solid lightgrey;
 }
-
+/* to remove the border on being focus on dropdown object */
 #category-container select:focus{
     outline: none;
 }
@@ -269,7 +271,7 @@ select {
 #remove-task a {
     color: grey;
 }
-
+/* Delete symbol hover */
 #remove-task a:hover {
     color: #dc3545;
 }
@@ -355,7 +357,7 @@ input#check-box {
     position: relative;
 }
 
-
+/* footerspan styling */
 #main-footer span{
   color: gray;
   margin-top: 25px;
@@ -374,7 +376,7 @@ input#check-box {
     -webkit-animation: pound .35s infinite alternate;
 }
 
-/* Animation for heart */
+/* Animation for heart icon*/
 @-webkit-keyframes pound{
   to{
     transform: scale(1.1);

@@ -74,7 +74,7 @@ app.get('/delete_todo_single', function(req, res) {
 // Delete for multiple todo task
 app.post('/delete-todo', function(req, res) {
     let ids = req.body.task;
-    // if single task is to be deleted
+    // to delete single task 
     if (typeof(ids) == "string") {
         Todo.findByIdAndDelete(ids, function(err) {
             if (err) { 
@@ -82,7 +82,8 @@ app.post('/delete-todo', function(req, res) {
                 return; 
             }
         });
-    } else {    // if multiple task is to be deleted
+    } 
+    else {    // to delete multiple todo task 
         for (let i = 0; i < ids.length; i++) {
             Todo.findByIdAndDelete(ids[i], function (err) {
                 if (err) { 
