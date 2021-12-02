@@ -63,7 +63,7 @@
                     <!-- Due Date container -->
                     <div id="due-date-container">
                         <p class="section-heading">DUE DATE</p>
-                        <input id="date-box" type="datetime-local" name="date" placeholder="" required>
+                        <input id="date-box" type="date" name="date" placeholder="" required>
                     </div>
     
                 </div>
@@ -96,8 +96,6 @@
             
     
             <!-- Div containing all the tasks-->
-            <div class="show">
-    
                 <!--delete task -->
                 <form id="delete1" action="/delete-todo" method="POST" >
                 
@@ -106,8 +104,7 @@
                         <div id="task">
                         
                             <input type="checkbox" id="check-box" name=task value="<%= todo_list[i]._id %>">
-    
-                            <!-- task -->
+
                             <div class="task-container">
                                 <span id="task-description">
                                     <%= todo_list[i].description %>
@@ -136,8 +133,6 @@
                     <% } %>
     
                 </form>
-    
-            </div>
     
         </div>
 

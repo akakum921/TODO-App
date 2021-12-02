@@ -6,10 +6,10 @@ body {
 
 #container{
     background-image:  linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)),url("https://images.pexels.com/photos/376368/pexels-photo-376368.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-    background-size: 100% 50vh;
+    background-size: 100% 50%;
     background-color: #fff;
     background-repeat: no-repeat;
-    width: 100vw;
+    width: 100%;
     padding: 30px;
 }
 
@@ -96,7 +96,7 @@ body {
 }
 
 #form-description {
-    width: 90%;
+    width: 95%;
     background-color: transparent;
     opacity: 0.5;
 }
@@ -165,9 +165,6 @@ select {
     opacity: 0.6;
 }
 
-section option{
-    background: #9b76f0;;
-}
 
 #date-box {
     border: 0;
@@ -338,7 +335,8 @@ input#check-box {
         width: 90%;
     }
     #container{
-        padding: 10px;
+        width: 100%;
+        padding: 0px;
     }
     #category-container select{
         width: auto;
