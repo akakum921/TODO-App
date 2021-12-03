@@ -69,6 +69,7 @@ app.get('/delete_todo_single', function(req, res) {
         }
         return res.redirect('/');
     });
+
 });
 
 // Delete for multiple todo task
@@ -84,16 +85,23 @@ app.post('/delete-todo', function(req, res) {
         });
     } 
     else {    // to delete multiple todo task 
-        for (let i = 0; i < ids.length; i++) {
-            Todo.findByIdAndDelete(ids[i], function (err) {
-                if (err) { 
-                    console.log("Error in deleting!");
-                    return; 
-                }
-            });
+
+        //to check if one or more items are selected or not
+        if(ids){
+            for (let i = 0; i < ids.length; i++) {
+               Todo.findByIdAndDelete(ids[i], function (err) {
+                  if (err) { 
+                     console.log("Error in deleting!");
+                     return; 
+                  }
+               });
+           }
         }
+        return res.redirect('/');
+
     }
     return res.redirect('/');
+
 });
 
 
