@@ -3,7 +3,7 @@ const express = require('express');
 // get the path object
 const path = require('path');
 
-const port = 8000;
+const port = 5000;
 
 // get the access to the database
 const db = require('./config/mongoose');
